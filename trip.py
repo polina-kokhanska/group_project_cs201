@@ -1,21 +1,23 @@
-from bikes import Bike
 from datetime import datetime
+from bikes import Bike
 
 
 class Trip:
-    def __init__(self, start_time, end_time,):
-        start_time = datetime.now()
+    def __init__(self, bike: Bike):
+        self.bike = bike
+        self.start_time = datetime.now()
         self.end_time = None
         self.trip_time = 0
-        return start_time
+        self.cost = 0
 
-    def finish(self, end_time,bike:Bike,start_time,):
+    def finish(self):
         self.end_time = datetime.now()
-        trip_time = self.end_time - self.start_time
-        self.bike.price_per_minute = bike.price_per_minute
-        cost = bike.price_per_minute * trip_time
-        return cost, trip_time
-    def total_earnings(self,bike:Bike,cost, number_of_clients):
-        total_earnings = cost*number_of_clients
-        return total_earnings
+        delta = self.end_time - self.start_time
+        self.trip_time = delta.total_seconds() / 60
+        self.cost = self.bike.price_per_minute * self.trip_time
+        return self.cost, self.trip_time
+
+
+def total_earnings(trips):
+    return sum(trip.cost for trip in trips)
         
