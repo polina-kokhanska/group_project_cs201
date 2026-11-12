@@ -6,4 +6,10 @@ import  bikes
 import  station
 
 def main():
-    pass
+    price_for_electro_bike = 5.0
+    price_for_regular_bike = 2.0
+    station_1 = station.Station([])
+    station_2 = station.Station([])
+    bike_1 = bikes.RegularBike(38478, station_1)
+    bike_2 = bikes.RegularBike(59844, station_1)
+    bike_3 = bikes.ElectricBike(39860, station_2)
