@@ -5,6 +5,8 @@ class Trip:
     def __init__(self, start_time, end_time,):
         start_time = datetime.now()
         self.end_time = None
+        self.trip_time = 0
+        return start_time
 
     def finish(self, end_time,bike:Bike,start_time,):
         self.end_time = datetime.now()
