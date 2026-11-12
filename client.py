@@ -1,7 +1,6 @@
 import datetime
 
 from bikes import Bike
-from group_project.group_project_cs201.bikes import BikeStatus
 
 
 class Client:
