@@ -1,6 +1,6 @@
 import datetime
 
-from bikes import Bike
+from bikes import *
 
 
 class Client:
