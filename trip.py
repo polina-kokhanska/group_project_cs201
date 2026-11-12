@@ -1,4 +1,4 @@
-from station import Station
+from bikes import Bike
 
 
 class Trip:
