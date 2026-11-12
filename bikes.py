@@ -16,10 +16,10 @@ class Bike:
 
 
 class RegularBike(Bike):
-    def __init__(self, id: int, parent_station):
+    def __init__(self, id: int, parent_station: Station):
         super().__init__(id, parent_station, 2.0)
 
 
 class ElectricBike(Bike):
-    def __init__(self, parent_station, id: int):
+    def __init__(self, id: int, parent_station: Station):
         super().__init__(id, parent_station, 5.0)
